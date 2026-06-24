@@ -120,6 +120,7 @@
     "extTweet": "X 推文",
     "extText": "文字",
     "extImage": "图片",
+    "extTime": "时间",
     "extGeneric": "扩展",
     "removeImage": "移除图片",
     "invalidImageIndex": "当前图片索引无效，无法删除！",

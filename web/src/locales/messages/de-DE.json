@@ -120,6 +120,7 @@
     "extTweet": "X-Beitrag",
     "extText": "Text",
     "extImage": "Bild",
+    "extTime": "Zeit",
     "extGeneric": "Erweiterung",
     "removeImage": "Bild entfernen",
     "invalidImageIndex": "Ungültiger Bildindex – Entfernen nicht möglich",

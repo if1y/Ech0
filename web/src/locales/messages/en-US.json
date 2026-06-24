@@ -120,6 +120,7 @@
     "extTweet": "X Post",
     "extText": "Text",
     "extImage": "Image",
+    "extTime": "Time",
     "extGeneric": "Extension",
     "removeImage": "Remove image",
     "invalidImageIndex": "Invalid current image index; cannot remove",
