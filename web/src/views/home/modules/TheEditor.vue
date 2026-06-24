@@ -78,6 +78,15 @@ watch(
 const fillEditorFromEchoToUpdate = () => {
   editorStore.clearEditor()
   echoToAdd.value.content = echoToUpdate.value?.content || ''
+  // 预填充修改时间：将数据库中的 created_at 转为 YYYY-MM-DD HH:mm 格式
+  const ts = echoToUpdate.value?.created_at
+  if (ts) {
+    const d = new Date(typeof ts === 'number' ? ts * 1000 : ts)
+    if (!isNaN(d.getTime())) {
+      const pad = (n: number) => String(n).padStart(2, '0')
+      editorStore.customCreatedAt = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`
+    }
+  }
 
   const existingImages = getEchoFiles(echoToUpdate.value)
   if (existingImages.length > 0) {
